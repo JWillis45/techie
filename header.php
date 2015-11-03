@@ -11,7 +11,8 @@
 </head>
 <body>
   <div class="container">
-  	<div class="row header">
+  	<div class="row">
+      <div class="header">
   		
   		<div class="col-xs-12 nav">
   			
@@ -30,7 +31,7 @@ wp_nav_menu( $defaults );
 <hr>
   		</div> <!-- end of nav --> 
     </div> <!-- end of header -->
-
+</div>
 
 
 <div class="category">
