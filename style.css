@@ -33,11 +33,14 @@
 }
 
 .nav a {float:left;
-	    color:blue;
+	    color:#000;
 		text-decoration:none;
 		padding:0px 0px;
 		padding:5px 15px;
 }
+
+.nav.nav-pills a:hover{background-color:none;
+border-radius:0px;}
 
 hr {height:1px;
 	background-color:#000;
@@ -93,16 +96,16 @@ h1 {text-decoration:none;
 			   font-family: 'Quicksand', sans-serif;
 	   	   	   font-weight: 400;
 			   text-decoration: none;
-			   text-decoration: none;
-			   margin-top:-55px;
+			   margin-top:-43px;
 			   height: 40px;
 			   width: 185px;
 			   padding-left:15px;
-			   margin-left: 4px; 
+			   margin-left: 4px;
+			   border:solid;
 }
 
 .title-box a{text-decoration: none;
-			 color:#fff;
+			 color:#dcd008;
 }
 
 .post-categories a{color:#fff;
@@ -115,14 +118,38 @@ a {text-decoration: none;
 }
 
 
-.feature-image img{width: 100%;
-				    height: auto;
-				    margin-top:-39px;
+.mid-section {background-color:#3d3d3d;
+			  
+			  padding:60px 0px; 
+
 
 }
 
+.mid-section img{width: 100%;
+				 height: auto;
+				 border:solid #ccc;
+				 border-width: 1px;
 
 
+}
+
+.post-titles a{font-size: 20px;
+			  text-align: center;
+			  font-family: 'Quicksand', sans-serif;
+	   	   	  font-weight: 400;
+	   	   	  color:#dcd008;
+
+}
+
+.post-titles {text-align: center;}
+
+.ads img{border:none;
+
+}
+
+.post-titles {margin-bottom: 70px;
+
+}
 
 
 
