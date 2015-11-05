@@ -29,14 +29,16 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
         </p>
     </div>
           </a>
-    </div>  
-
-      </div>
-    </div>
+   
 
     <?php endwhile; else: ?>
       <p>Sorry, no pages matched your criteria.</p>
     <?php endif; wp_reset_postdata();?>
+
+
+
+
+
 
 
 
@@ -90,24 +92,74 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 </div> <!-- end of mid-section -->
 
 
+
+
+
+
+
+
 <div class="row starry-section">
-  <div class="col-xs-12 nopadding">
-    <?php 
-
-    $args = array ('post_type' => 'features',
-                   'posts_per_page'=>'1'
-);
-
-    $features = new WP_Query( $args );
-
-
-    if ($features -> have_posts()) : while ($features -> have_posts()) : $features -> the_post(); 
-
-?>
+  <div class="col-xs-12">
     <h2>Popular</h2>
+<?php 
 
+  $args = array('post_type' => 'post',
+                 'posts_per_page'=>'3',
+                 'category_name'=> 'popular'
+  );
+
+  $post = new WP_Query( $args );
+
+  if ($post -> have_posts()) : while ($post -> have_posts()) : $post -> the_post(); 
+
+  ?>
+
+<div class="popular-posts">
+          <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('post_thumb');?>" alt=""></a>
+          <div class="popular-titles">
+          <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+          </div>
+</div>
+
+    <?php endwhile; else: ?>
+        <p>Sorry, no pages matched your criteria.</p>
+      <?php endif; wp_reset_postdata();?>
   </div>
 </div>
+
+
+
+
+<div class="row lower-ad">
+  
+   
+ <?php 
+
+  $args = array('post_type' => 'banners',
+                 'posts_per_page'=>'1');
+
+  $banners = new WP_Query( $args );
+
+
+  if ($banners -> have_posts()) : while ($banners -> have_posts()) : $banners -> the_post(); 
+
+  ?>
+ 
+
+  <div class="col-xs-12 banner-thumbs">
+    <?php the_content();?>
+  
+  </div>
+</div>
+
+
+
+
+      <?php endwhile; else: ?>
+        <p>Sorry, no pages matched your criteria.</p>
+      <?php endif; wp_reset_postdata();?>
+ 
+
 
 
 <?php get_footer(); ?>
