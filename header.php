@@ -42,7 +42,7 @@ wp_nav_menu( $defaults );
     		echo '<h2>- Start Your Adventure -<h2>';
 }
 		else{
-        echo the_category('','');
+        echo the_title();
 }
 ?>
 </h2>
