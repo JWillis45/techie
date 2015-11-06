@@ -70,7 +70,8 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
   <?php 
 
   $args = array ('post_type' => 'ads',
-                 'posts_per_page'=>'2');
+                 'posts_per_page'=>'2',
+                 'orderby'       => 'rand');
 
   $ads = new WP_Query( $args );
 
@@ -79,7 +80,11 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 
   ?>
 
-  <?php the_content(); ?>
+     <div class="col-xs-12 ads-thumb nopadding">
+    <img class="img-responsive" src="<?php the_field('ad_thumb');?>" alt=""></a>
+  
+  </div>
+
 
 
 
@@ -104,13 +109,15 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 <?php 
 
   $args = array('post_type' => 'post',
-                 'posts_per_page'=>'3',
-                 'category_name'=> 'popular'
+                'posts_per_page'=>'3',
+                'category_name'=> 'popular'
   );
 
-  $post = new WP_Query( $args );
+  $popular_post = new WP_Query( $args );
 
-  if ($post -> have_posts()) : while ($post -> have_posts()) : $post -> the_post(); 
+if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $popular_post -> the_post(); 
+
+  
 
   ?>
 
@@ -136,7 +143,8 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
  <?php 
 
   $args = array('post_type' => 'banners',
-                 'posts_per_page'=>'1');
+                 'posts_per_page'=>'1',
+                 'orderby'       => 'rand');
 
   $banners = new WP_Query( $args );
 
@@ -147,7 +155,7 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
  
 
   <div class="col-xs-12 banner-thumbs">
-    <?php the_content();?>
+    <img class="img-responsive" src="<?php the_field('banner_thumb');?>" alt=""></a>
   
   </div>
 </div>
