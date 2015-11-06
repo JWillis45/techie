@@ -10,6 +10,7 @@
 	<?php wp_head();?>
   <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
   <div class="container">
   	<div class="row">
@@ -18,16 +19,10 @@
   		<div class="col-xs-12 nav">
   			
   		<?php
-
-$defaults = array(
-    
-    'menu_class'      => 'nav nav-pills',
-    
+        $defaults = array(
+          'menu_class'      => 'nav nav-pills',
 );
-
-
-wp_nav_menu( $defaults );
-
+        wp_nav_menu( $defaults );
 ?>
 <hr>
   		</div> <!-- end of nav --> 
@@ -39,7 +34,7 @@ wp_nav_menu( $defaults );
 
 <h2><?php
 		if(( is_home() )){
-    		echo '<h2>- Start Your Adventure -<h2>';
+    		echo '- Start Your Adventure -';
 }
 		else{
         echo the_title();
