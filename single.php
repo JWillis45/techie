@@ -2,19 +2,40 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <h1><?php the_title(); ?></h1>
-      <?php echo get_the_date(); ?> by <?php the_author(); ?>
-
+      
+   <div class="row content">
+   		<div class="col-xs-12 nopadding">
+   		  	<img class="img-responsive" src="<?php the_field('thumbnail');?>" alt="">
+ 
      <?php the_content(); ?>
-      <p>
-      	Category: 
+     	<div class="date">
+     		- <?php echo get_the_date(); ?> -
+     	</div>
 
-      <?php the_category(', ') . " " . the_tags(__('Tags: '), ', ', ' | ') . edit_post_link(__('Edit'), ''); ?>
+     	
 
-      </p>
+     </div>
+     </div><!-- end of row -->
+
+   <div class="row post-nav">
+   		<div class="col-xs-4 previous-post-button btn btn-primary">
+			<?php previous_post_link( '%link', 'Previous post', TRUE ); ?>
+		
+		</div>
+		<div class="col-xs-4 post-button-category">
+			<p>| <?php the_category(', '); ?> |</p>
+		</div>
+		
+		<div class="col-xs-4 next-post-button btn btn-primary">
+		    <?php next_post_link( '%link', 'Next post', TRUE ); ?>
+		</div>
+   </div>
+     <br>
+     
+		
 
 	<?php endwhile; else: ?>
 		<p>Sorry, no posts matched your criteria.</p>
-<?php endif; ?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
