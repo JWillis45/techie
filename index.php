@@ -81,7 +81,9 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
   ?>
 
      <div class="col-xs-12 ads-thumb nopadding">
-    <img class="img-responsive" src="<?php the_field('ad_thumb');?>" alt=""></a>
+    <div class="ads-content">
+      <?php the_content();?>
+    </div>
   
   </div>
 
@@ -155,8 +157,9 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
  
 
   <div class="col-xs-12 banner-thumbs">
-    <img class="img-responsive" src="<?php the_field('banner_thumb');?>" alt=""></a>
-  
+    <div class="banner-content">
+    <?php the_content();?>
+    </div>
   </div>
 </div>
 
