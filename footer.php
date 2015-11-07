@@ -1,20 +1,19 @@
-	<div id="footer">
+	<div id="footer nopading">
 <div class="row footer-content">
-	<div class="col-xs-12 footer-content">
+	<div class="col-xs-12 footer-content-left">
 		<h2>Contact Us</h2>
 			<p>742 Evergreen Terrace <br>
 			   Springfield, Ca 91325<br>
 			   (661) 123-4567</p>
 	</div>
 
-	<div class="col-xs-12">
+	<div class="col-xs-12 footer-content-right">
 		<h2>Subscribe</h2>
-	</div>
+	
 	
 	<div class="email-form">
-	<?php echo do_shortcode( '[contact-form-7 id="62" title="Contact form 1" minlength:10 maxlength:100]
-
-' ); ?><!-- contact form -->
+	<?php echo do_shortcode( '[contact-form-7 id="62" title="Contact form 1"]' ); ?><!-- contact form -->
+	</div>
 	</div>
 	
 	<div class="col-xs-12 social-media">
