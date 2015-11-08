@@ -20,7 +20,7 @@
    <div class="row post-nav">
    		<div class="col-xs-12 post-nav-content">
    			<div class="col-xs-4 previous-post-button btn btn-primary">
-			<?php previous_post_link( '%link', 'Previous Post', TRUE ); ?>
+			<?php previous_post_link( '%link', 'Previous', TRUE ); ?>
 		
 			</div>
 		<div class="col-xs-4 post-button-category">
@@ -28,7 +28,7 @@
 		</div>
 		
 		<div class="col-xs-4 next-post-button btn btn-primary">
-		    <?php next_post_link( '%link', 'Next Post', TRUE ); ?>
+		    <?php next_post_link( '%link', 'Next', TRUE ); ?>
 		</div>
    		</div>
    </div>
@@ -40,6 +40,10 @@
      <div class="row single-lower-ad">
   
    
+ 
+
+
+
  <?php 
 
   $args = array('post_type' => 'banners',
