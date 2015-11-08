@@ -46,7 +46,7 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
     
     <?php if(have_posts()): while (have_posts()) : the_post(); ?>
       <div class="post-thumbs">
-        <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('post_thumb');?>" alt=""></a>
+        <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
       </div>
 
   <div class="col-xs-12">
@@ -124,7 +124,7 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
   ?>
 
 <div class="popular-posts">
-          <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('post_thumb');?>" alt=""></a>
+          <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
           <div class="popular-titles">
           <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
           </div>
