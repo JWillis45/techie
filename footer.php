@@ -1,4 +1,4 @@
-	<div id="footer nopading">
+	<div id="footer">
 <div class="row footer-content">
 	<div class="col-xs-12 footer-content-left">
 		<h2>Contact Us</h2>
