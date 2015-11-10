@@ -1,20 +1,20 @@
 	<div id="footer">
 <div class="row footer-content">
-	<div class="col-xs-12 footer-content-left">
+	<div class="col-xs-12 col-sm-6 footer-content-left">
 		<h2>Contact Us</h2>
 			<p>742 Evergreen Terrace <br>
 			   Springfield, Ca 91325<br>
 			   (661) 123-4567</p>
 	</div>
 
-	<div class="col-xs-12 footer-content-right">
+	<div class="col-xs-12 col-sm-6 footer-content-right">
 		<h2>Subscribe</h2>
 	
 	
-	<div class="email-form">
-	<?php echo do_shortcode( '[contact-form-7 id="62" title="Contact form 1"]' ); ?><!-- contact form -->
-	</div>
-	</div>
+		<div class="email-form">
+			<?php echo do_shortcode( '[contact-form-7 id="62" title="Contact form 1"]' ); ?><!-- contact form -->
+		</div>
+	
 	
 	<div class="col-xs-12 social-media">
 		<a href="https://instagram.com/?hl=en"><img src="<?php bloginfo('template_directory'); ?>/images/instagram-logo.png"></a>
@@ -22,6 +22,7 @@
 		<a href="https://facebook.com/?hl=en"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-logo.png"></a>
 
 	</div>
+	</div5
 </div>
 
 
