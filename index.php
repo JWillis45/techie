@@ -42,8 +42,19 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 
 
 <div class="row mid-section"> <!-- Posts Images and Titles -->
-    <div class="col-xs-12 col-sm-6 posts">
-    <?php if(have_posts()): while (have_posts()) : the_post(); ?>
+<div class="mid-contain">
+  <div id="column-wrap">
+<?php $count = 0;
+ 
+while(have_posts()) : the_post(); ?>
+ 
+<div class="box<?php if( $count%2 == 0 ) { echo '-1'; }; $count++; ?>">
+
+
+
+    <div class="col-xs-12 col-sm-7 posts">
+    
+      <div class="post-pics">
       <div class="post-thumbs">
         <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
       </div>
@@ -53,16 +64,23 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
             </a>
           </p>
   
-      <?php endwhile; else: ?>
-      <p>Sorry, no pages matched your criteria.</p>
-      <?php endif; wp_reset_postdata();?>
+      
+     
     
   </div>
+  </div>
+
+
+
+  </div>
+ 
+<?php endwhile; ?> <?php wp_reset_postdata();?>
+</div><!--end column-wrap-->
 
 
   
 
-  <div class="col-xs-12 col-sm-6 ads ">
+  <div class="col-xs-12 col-sm-5 ads ">
   
   <?php 
 
@@ -88,7 +106,7 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
       <?php endif; wp_reset_postdata();?>
 
   </div>
-
+</div>
 </div> <!-- end of mid-section -->
 
 
@@ -99,8 +117,7 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 
 
 <div class="row starry-section">
-  <div class="col-xs-12">
-  <div class="col-xs-12 col-sm-6 tent-image"></div>
+  <div class="col-xs-12 col-sm-6"></div>
 
   <div class="col-xs-12 col-sm-6 popular">
     <div class="row">
@@ -123,38 +140,40 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
   
 
   ?>
-  <div class="row pop-posts">
-    <div class="col-xs-12">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 pop-column nopadding">
-                <div class="popular-posts">
-                <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
-                </div>
+  
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 pop-column nopadding">
+            <div class="popular-posts">
+              <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 pop-title-column nopadding">
+
+          <div class="popular-titles">
+            <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
           </div>
+        </div>
 
-          <div class="col-xs-12 col-sm-6 pop-title-column nopadding">
-
-                <div class="popular-titles">
-                <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
-                </div>
-          </div>
-
-            <?php endwhile; else: ?>
+            
+    </div>
+        <?php endwhile; else: ?>
               <p>Sorry, no pages matched your criteria.</p>
             <?php endif; wp_reset_postdata();?>
-        </div>
-    </div>
-  </div>
-</div><!-- end of popular column -->
-</div>
-</div><!-- end of starry-section -->
+    
 
+</div>
+</div>
+<!-- end of popular column -->
+ 
 
 
 
 
 
 <div class="row lower-ad">
+  <div class="col-xs-12">
   
    
  <?php 
@@ -178,6 +197,7 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
   </div>
 </div>
 </div>
+
 
 
 
