@@ -15,17 +15,16 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 
      
      <div class="row features"> <!-- Feature Image-->
-  
-      <div class="col-xs-12 nopadding">
-        <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
-      </div>
+        <div class="col-xs-12 nopadding">
+          <a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php the_field('thumbnail');?>" alt=""></a>
+        </div>
     </div>
 
 <div class="row"> <!-- Feature Title -->    
     <div class="title-box">
         <p>
           <a href="<?php the_permalink(); ?>">
-        <?php the_title();?>
+          <?php the_title();?>
         </p>
     </div>
           </a>
@@ -42,8 +41,8 @@ if ($features -> have_posts()) : while ($features -> have_posts()) : $features -
 
 
 <div class="row mid-section"> <!-- Posts Images and Titles -->
-<div class="mid-contain">
-  <div id="column-wrap">
+  <div class="mid-contain">
+    <div id="column-wrap">
 <?php $count = 0;
  
 while(have_posts()) : the_post(); ?>
@@ -89,18 +88,15 @@ while(have_posts()) : the_post(); ?>
                  'orderby'       => 'rand');
 
   $ads = new WP_Query( $args );
+    if ($ads -> have_posts()) : while ($ads -> have_posts()) : $ads -> the_post(); 
+?>
 
-
-  if ($ads -> have_posts()) : while ($ads -> have_posts()) : $ads -> the_post(); 
-
-  ?>
-
-     <div class="ads-thumb nopadding">
-    <div class="ads-content">
-      <?php the_content();?>
-    </div>
+      <div class="ads-thumb nopadding">
+        <div class="ads-content">
+            <?php the_content();?>
+        </div>
   
-  </div>
+      </div>
       <?php endwhile; else: ?>
         <p>Sorry, no pages matched your criteria.</p>
       <?php endif; wp_reset_postdata();?>
@@ -117,7 +113,8 @@ while(have_posts()) : the_post(); ?>
 
 
 <div class="row starry-section">
-  <div class="col-xs-12 col-sm-6"></div>
+  <div class="col-xs-12 col-sm-6">
+  </div>
 
   <div class="col-xs-12 col-sm-6 popular">
     <div class="row">
