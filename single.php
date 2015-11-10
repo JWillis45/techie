@@ -19,6 +19,7 @@
 
    <div class="row post-nav">
    		<div class="col-xs-12 post-nav-content">
+        <div class="post-nav-contain">
    			<div class="col-xs-4 previous-post-button btn btn-primary">
 			<?php previous_post_link( '%link', 'Previous', TRUE ); ?>
 		
@@ -31,6 +32,7 @@
 		    <?php next_post_link( '%link', 'Next', TRUE ); ?>
 		</div>
    		</div>
+      </div>
    </div>
 
 <?php endwhile; else: ?>
@@ -59,9 +61,9 @@
  
 
   <div class="col-xs-12 banner-thumbs nopadding">
-	<div class="single-banner-content">
+	   <div class="single-banner-content">
     	<?php the_content();?>
-    </div>  
+     </div>  
   </div>
 
 </div>
