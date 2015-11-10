@@ -14,7 +14,7 @@ Template Name: Contact Page
 
 	<div class="row contact form">
 		<div class="col-xs-12 nopadding">
-
+        <div class="form">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	 		<?php the_content(); ?>
@@ -23,44 +23,44 @@ Template Name: Contact Page
 	    		<p>Sorry, no pages matched your criteria.</p>
 			<?php endif; ?>
 		</div>
+    </div>
 	</div><!-- end of row contact-form -->
 
 </div><!-- end of row entire-contact -->
 
 
-<div class="row">
-<div class="col-xs-12 contact-ads nopadding">
+<div class="row single-lower-ad">
   
-  <?php 
+   
+ 
 
-  $args = array ('post_type' => 'ads',
-                 'posts_per_page'=>'2',
+
+
+ <?php 
+
+  $args = array('post_type' => 'banners',
+                 'posts_per_page'=>'1',
                  'orderby'       => 'rand');
 
-  $ads = new WP_Query( $args );
+  $banners = new WP_Query( $args );
 
 
-  if ($ads -> have_posts()) : while ($ads -> have_posts()) : $ads -> the_post(); 
+  if ($banners -> have_posts()) : while ($banners -> have_posts()) : $banners -> the_post(); 
 
   ?>
+ 
 
-     <div class="col-xs-12 contact-ads-thumb nopadding">
-    <div class="contact-ads-content">
+  <div class="col-xs-12 banner-thumbs nopadding">
+  <div class="single-banner-content">
       <?php the_content();?>
-    </div>
-  
+    </div>  
   </div>
 
-
-
-
-      <?php endwhile; else: ?>
-        <p>Sorry, no pages matched your criteria.</p>
-      <?php endif; wp_reset_postdata();?>
-
-  </div>
 </div>
 
+<?php endwhile; else: ?>
+    <p>Sorry, no pages matched your criteria.</p>
+<?php endif; wp_reset_postdata();?>
 
 
 <?php get_footer(); ?>
