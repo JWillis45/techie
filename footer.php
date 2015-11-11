@@ -22,7 +22,7 @@
 		<a href="https://facebook.com/?hl=en"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-logo.png"></a>
 
 	</div>
-	</div5
+	
 </div>
 
 

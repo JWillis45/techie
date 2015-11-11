@@ -160,9 +160,9 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
             <?php endif; wp_reset_postdata();?>
     
 
-</div>
-</div>
-<!-- end of popular column -->
+  </div><!-- end of col popular  -->
+</div><!-- end of row starry-section -->
+
  
 
 
@@ -170,30 +170,27 @@ if ($popular_post -> have_posts()) : while ($popular_post -> have_posts()) : $po
 
 
 <div class="row lower-ad">
-  <div class="col-xs-12">
-  
-   
- <?php 
+    <div class="col-xs-12">
+    
+    <?php 
 
-  $args = array('post_type' => 'banners',
-                 'posts_per_page'=>'1',
-                 'orderby'       => 'rand');
+    $args = array('post_type' => 'banners',
+                   'posts_per_page'=>'1',
+                   'orderby'       => 'rand');
 
-  $banners = new WP_Query( $args );
-
+    $banners = new WP_Query( $args );
 
   if ($banners -> have_posts()) : while ($banners -> have_posts()) : $banners -> the_post(); 
+?>
+   
 
-  ?>
- 
-
-  <div class="col-xs-12 banner-thumbs">
-    <div class="banner-content">
-    <?php the_content();?>
+    <div class="col-xs-12 banner-thumbs">
+      <div class="banner-content">
+        <?php the_content();?>
+      </div>
     </div>
   </div>
-</div>
-</div>
+</div><!-- end row lower-ad -->
 
 
 
