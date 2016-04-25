@@ -71,8 +71,9 @@ h1, h2, h4, a{text-transform: uppercase;}
 hr {height:1px;
 	background-color:#000;
 	border:none;
-	width: 104%;
+	width: 100%;
 	margin-top: -6px;
+	margin-left: 15px;
     padding:0px;
 
 }
@@ -142,6 +143,8 @@ a {text-decoration: none;
 
 .mid-section {background-color:#3d3d3d;
 			  padding:60px 0px; 
+			  margin-left:-15px;
+			  width: 970px;
 
 
 }
@@ -150,6 +153,7 @@ a {text-decoration: none;
 				 height: auto;
 				 border:solid #ccc;
 				 border-width: 1px;
+
 
 
 }
@@ -184,6 +188,7 @@ a {text-decoration: none;
 }
 
 .starry-section {background-image:url("images/starry.jpg");
+		width: 970px;
 
 				 
 }
@@ -592,7 +597,7 @@ a {text-decoration: none;
 
 .social-media {margin-left:-10px;
 	padding-right:20px;
-	width: 400px;
+	width: 300px;
 			
 }
 .post-nav-contain {margin:0px auto;
@@ -887,6 +892,7 @@ a {text-decoration: none;
 
 .mid-section {padding:50px 0px;
 			  padding-bottom: 0px;
+			  height: 446px;
 
 }
 
@@ -905,41 +911,56 @@ a {text-decoration: none;
 		margin-bottom: -25px;
 }
 
+.post-thumbs {width: 950px;
+			  margin:0 auto;
+			  margin-top:30px;
+			  margin-bottom: 20px;
+
+}
+
 .post-thumbs {
-			  
+			  margin-left: 16px;
 			  margin-top:30px;
 			 
 			  
 }
 
-.post-thumbs img{width: 250px;
-	             margin-left: -17px;
+.post-thumbs img{width: 320px;
+	             margin-left: -90px;
+
 }
 
-.post-titles a{font-size: 17px;
-			  text-align: center;
+
+.post-titles a{font-size: 20px;
 			  font-family: 'Quicksand', sans-serif;
 	   	   	  font-weight: 400;
 	   	   	  color:#dcd008;
 	   	   	  text-decoration: none;
 	   	   	  text-align: left;
-	   	   	  
 }
-.box-1 { float:left; clear:left; width: 200px; margin-left: 0;padding:0px; }
-.box { float:left; width: 200px; padding:0px 20px; margin-left: 60px;}
+
+.post-titles {
+	width:300px;
+	margin-left:-70px;
+}
+
+.box-1 { float:left; clear:left; width: 250px; margin-left: 0;padding:0px; }
+.box { float:left; width: 250px; padding:0px 20px; margin-left: 90px;}
 
 .ads {margin-top:22px;
-	  margin-left:-40px;
+	  margin-left:-100px;
 }
 
 .ads-thumb {margin-left: 150px;
-		    width: 250px;
-		    height: 120px;
+		    width: 290px;
+		    height: 130px;
 }
 
 .ads img{border:none;
 		 margin-bottom:px;
 		 padding-top:8px;
+		 height: 145px;
+		 overflow: hidden;
 		 
 		
 
@@ -1091,7 +1112,7 @@ a {text-decoration: none;
 
 .social-media {margin-left:-43px;
 	padding-right:20px;
-	width: 400px;
+	width: 380px;
 			
 }
 
@@ -1101,6 +1122,15 @@ a {text-decoration: none;
 				 margin-top:-40px;
 }
 
+.mid-section {background-color:#3d3d3d;
+			  padding:60px 0px; 
+			  width:1024px;
+}
+
+.starry-section {
+	width:1024px;
+}
+}
 
 
 }/*end of sm media query*/
@@ -1128,6 +1158,10 @@ a {text-decoration: none;
 @media only screen and (min-width : 992px) {
 
 
+
+.popular {
+	width: 10px;
+}
 .header {
 		 background-image:url("images/header-pic-lg.jpg");
 		 height: 344px;

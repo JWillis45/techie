@@ -79,7 +79,7 @@ while(have_posts()) : the_post(); ?>
 
   
 
-  <div class="col-xs-12 col-sm-5 ads ">
+  <div class="col-xs-12 col-sm-3 ads ">
   
   <?php 
 
