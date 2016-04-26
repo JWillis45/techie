@@ -1007,7 +1007,8 @@ a {text-decoration: none;
 
 .popular h2 {text-align: left;
 			 width: 234px;
-			 margin:40px auto; 
+			 margin:30px auto;
+			 margin-top:62px; 
 }
 
 .pop-posts {margin:auto;
@@ -1020,11 +1021,11 @@ a {text-decoration: none;
 }
 
 .popular-posts {width: 130px;
-				height: 130px;
+				height: 100px;
 				background-color: #fff;
 				border:solid #ccc;
 				text-align: center;
-				margin:20px auto;
+				margin:30px auto;
 				padding:10px;
 				position: relative;
 				z-index: 1;
@@ -1033,9 +1034,11 @@ a {text-decoration: none;
 				
 			}
 
-.popular-posts img{width:140px;
-				   height: 100px;
+.popular-posts img{width:92px;
+				   height: 85px;
 			       margin:0 auto;
+			       margin-top:-5px;
+			       margin-left:-5px;	
 			       border:solid #ccc;
 
 
@@ -1051,20 +1054,20 @@ a {text-decoration: none;
 
 }
 
-.popular-titles {width: 105%;
+.popular-titles {width: 100%;
 				 text-align: left;
-				 margin-top:-10px;
+				 margin-top:0px;
 				 margin-left:-37px;
 				 background-color: #fff;
 				 text-align: left;
 				 float:left;
 				 padding:30px 15px;
-				 padding-left: 30px;
-				 padding-top: 27px;
+				 padding-left: 15px;
+				 padding-top:15px;
 				 border:solid #ccc;
 				 border-left:none;
 				 border-width: 3px;
-				 height:130px;
+				 height:100px;
 				 overflow: hidden;
 
 

@@ -1,3 +1,4 @@
+
 <?php get_header(); query_posts('posts_per_page=2'); ?>
 
 <?php 
